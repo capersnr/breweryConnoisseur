@@ -48,7 +48,7 @@ Landing page: large background image, minimize scrolling
 Sample wireframes 
 
 
-![mockup]()
+![mockup](BreweryMockup.png)
 
 
 
