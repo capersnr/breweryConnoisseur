@@ -9,7 +9,7 @@ body, html {height: 100%;
   filter: brightness(95%); 
 }
 
-.masthead-brand {
+.masthead-brand{
   font-family: 'Fredericka the Great', cursive;
   font-size: 45px;
   font-weight: 600px;
@@ -18,6 +18,7 @@ body, html {height: 100%;
   color: #ffd700;
   text-shadow: 8px 8px 8px green;
   align-items: center
+  
 }
 
 
@@ -29,6 +30,31 @@ body, html {height: 100%;
   background-color: #ffd700;
   outline: green;
   border-radius: 25px;
+}
+
+
+ #zip-col{
+ padding-left: 0%;
+ margin-left: 300px;
+ margin-right: 5px;
+ 
+
+}
+#radius-cal{
+  padding-left: 1%;
+  margin-left: 15px;
+}
+
+#rating-cal{
+  padding-left: 1.5%;
+  margin-left: -170px; 
+}
+
+#search {
+  padding-left: 1.5%;
+  margin-left: -65%;
+}
+
 
 /* }
 .logo {
