@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <title>Cover Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
@@ -19,39 +19,59 @@
     <link href="assets/css/cover.css" rel="stylesheet">
   </head>
 
-  <body class="text-center">
+    <body>
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand">DMV Brew Connoisseur</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="#">Find</a>
-            <a class="nav-link" href="#">Events</a>
-            <a class="nav-link" href="#">Learn</a>
-          </nav>
-        </div>
-      </header>
-
-      <main role="main" class="inner cover">
-        <h1 class="cover-heading home">Coding is thirsty work!</h1>
-        <p class="lead home">Connecting Coders with Brewers in the DMV</p>
-        <p class="lead">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <button class="btn btn-light" type="button" id="button-addon1">Search</button>
-                </div>
-                <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-              </div>
-        </p>
-      </main>
-
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
+      <div>
+        <h3 class="masthead-brand">DMV Brew Connoisseur</h3>
+        <p class="logo">Brewing for the working Coders!</p>
+        <button type="button" id="myBtn" onclick="myFunction()">DMV Brews</button>  
+      </div>
+      <div>
           
-        </div>
-      </footer>
+      </div>
+<div class="container">
+      <form class="form-inline" id="search-form" >
+          <div class="form-row form-group has-error has-feedback" id="valid-zip" >
+            <div class="col-md-3 zip-code" id="zip-col">
+              <input type="text" class="form-control" name="zip" placeholder="Zip" id="zip">
+   
+            </div>
+          </div>
+          <div class="col-md-3" id="radius-cal">
+              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Radius</label>
+              <select class="custom-select mr-sm-2" id="radius">
+                <option value="" selected>Radius</option>
+                <option value="1609">1 Mile</option>
+                <option value="4827">3 Miles</option>
+                <option value="8045">5 Miles</option>
+                <option value="16090">10 Miles</option>
+              </select>
+            </div>
+            <div class="col-md-3" id="rating-cal">
+              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Yelp Rating</label>
+              <select class="custom-select mr-sm-2" id="rating">
+                <option value="0" selected>Rating</option>
+                <option value="3">3+ Stars</option>
+                <option value="4">4+ Stars</option>
+                <option value="5">5 Stars</option>
+   
+              </select>
+            </div>
+   
+            <div class="col-md-3" id="search-cal">
+              <button type="submit" class="btn btn-primary" id="search">Search</button>
+            </div>
+        </form>
+      </div>
+   
+      <div id="message">
+   
+   
+      </div>
     </div>
+
+
+
 
 
     <!-- Bootstrap core JavaScript
@@ -62,3 +82,7 @@
  
   </body>
 </html>
+ zip 
+ ratious = drop down
+ rating  = drop down
+ seach button 
