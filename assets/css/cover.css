@@ -34,8 +34,8 @@ body, html {height: 100%;
 
 
  #zip-col{
- padding-left: 0%;
- margin-left: 300px;
+ padding-left: 5%;
+
  margin-right: 5px;
  
 
@@ -51,8 +51,8 @@ body, html {height: 100%;
 }
 
 #search {
-  padding-left: 1.5%;
-  margin-left: -65%;
+  padding-left: 0;
+  margin-left:0;
 }
 
 
