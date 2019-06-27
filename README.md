@@ -45,8 +45,10 @@ Learn about beer section
 Design Notes:
 Landing page: large background image, minimize scrolling  
 
-Sample image 
+Sample wireframes 
 
+
+![mockup](BreweryMockUp.png)
 
 
 
