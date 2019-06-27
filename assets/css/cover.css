@@ -1,3 +1,4 @@
+
 body,h1,h5 {font-family: 'Fredericka the Great', cursive;}
 body, html {height: 100%;      
   background-image: url('../images/BreweryLandingPage_5.jpg');
@@ -6,6 +7,7 @@ body, html {height: 100%;
   background-size: cover;
   background-blend-mode: luminosity; 
   filter: brightness(95%); 
+
 }
 
 .masthead-brand{
@@ -36,4 +38,73 @@ body, html {height: 100%;
 
  margin-left: 300px;
 
+
+}
+
+.masthead-brand{
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 45px;
+  font-weight: 600px;
+  margin-left: 500px;
+  padding-top: 200px;
+  color: #ffd700;
+  text-shadow: 8px 8px 8px green;
+  align-items: center
+  
+}
+
+
+#myBtn {
+  margin-bottom: 100px;
+  margin-top: 84px;
+  font-size: 45px;
+  margin-left: 640px;
+  background-color: #ffd700;
+  outline: green;
+  border-radius: 25px;
+}
+
+
+ #zip-col{
+ padding-left: 0%;
+ margin-left: 300px;
+ margin-right: 5px;
  
+
+}
+#radius-cal{
+  padding-left: 1%;
+  margin-left: 15px;
+}
+
+#rating-cal{
+  padding-left: 1.5%;
+  margin-left: -170px; 
+}
+
+#search {
+  padding-left: 1.5%;
+  margin-left: -65%;
+}
+
+
+/* }
+.logo {
+  margin-bottom: 0px;
+  margin-top: 84px;
+  font-size: 45px;
+  margin-left: 640px;
+  color: #ffd700; */
+
+}
+
+/* Custom default button */
+/* .btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  box-shadow: 5px 10px 18px #cfae06; /* Prevent inheritance from `body` */
+  /* background-color: #fff;
+  border-block-end-style: .05rem solid black;
+} */
+
