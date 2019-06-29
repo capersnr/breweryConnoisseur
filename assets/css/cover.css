@@ -1,4 +1,4 @@
-body,h1,h5 {font-family: 'Fredericka the Great', cursive;}
+body,h5 {font-family: 'Fredericka the Great', cursive;}
 body, html {height: 100%;      
   background-image: url('../images/BreweryLandingPage_5.jpg');
   min-height: 100%;
@@ -19,7 +19,10 @@ body, html {height: 100%;
   align-items: center
   
 }
-
+.events {
+  text-align: middle;
+  color: #008000;
+}
 
 #myBtn {
   margin-bottom: 100px;
@@ -31,50 +34,276 @@ body, html {height: 100%;
   border-radius: 25px;
 }
 
+img {
+  padding-left: 31%;
+  margin-top: 155px;
+  -webkit-filter: drop-shadow(10px 10px 10px #ffd700); /* Safari */
+  filter: drop-shadow(8px 8px 10px #ffd700);
+}
 
  #zip-col{
-
+ padding-left: 5%;
+ margin-right: 5px;
  margin-left: 300px;
-
- 
-
+ -webkit-text-fill-color: #008000;
+ font-weight: bold;
 }
+
 #radius-cal{
-  padding-left: 5px;
- 
- 
+  padding-left: 5px; 
+  -webkit-text-fill-color: #008000;
+  font-weight: bold;
 }
 
 #rating-cal{
   padding-left: 5px;
-  margin-left:-75px;
- 
+  margin-left:-75px; 
+  -webkit-text-fill-color: #008000;
+  font-weight: bold;
 }
 
 #search {
+  padding-left: 0;
+  margin-left:0;
   padding-left: 5px;
-  margin-left:-85px;
+  margin-left:-85px; 
+  color: #000000;
+  background-color: #ffd700;
+  font-weight: bold;
+}
+
+.flip-card {
+  background-color: #000000;
+  background-blend-mode: lighten;
+  width: 200px;
+  height: 150px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  border-radius: 25px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.flip-card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 #ffd700(0,0,0,0.2);
+  border-radius: 25px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  border-radius: 25px;
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  background-color: #000000;
+  color: #008000; 
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #ffd700;
+  color: black;
+  font-family:'Fredericka the Great', cursive;
+  border-radius: 25px;
+  margin-top: 50px;
+}
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: #ffd700;
+  transform: rotateY(180deg);
+  border-radius: 25px;
+}
+
+h1{
+color: aliceblue;
+}
+
+.flip-card-contact {
+  background-color: #000000;
+  width: 200px;
+  height: 150px;
+  border: 1px solid #f1f1f1;
+  /* perspective: 1000px; */
+  border-radius: 25px;
+  position: relative;
+   /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner-contact {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 #ffd700(0,0,0,0.2);
+  border-radius: 25px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card-contact:hover .flip-card-inner-contact {
+  transform: rotateY(180deg);
+  border-radius: 25px;
+}
+
+/* Position the front and back side */
+.flip-card-front-contact, .flip-card-back-contact {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  background-color: #000000;
+  color: #008000; 
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front-contact {
+  background-color: #ffd700;
+  color: black;
+  font-family:'Fredericka the Great', cursive;
+  border-radius: 25px;
+  margin-top: 40px;
+}
+/* Style the back side */
+.flip-card-back-contact {
+  
+  color: #ffd700;
+  transform: rotateY(180deg);
+  border-radius: 25px;
+}
+
+.flip-card-learn {
+  background-color: #000000;
+  width: 200px;
+  height: 150px;
+  border: 1px solid #f1f1f1;
+  /* perspective: 1000px; */
+  border-radius: 25px;
+  position: relative;
+   /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner-learn {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 #ffd700(0,0,0,0.2);
+  border-radius: 25px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card-learn:hover .flip-card-inner-learn {
+  transform: rotateY(180deg);
+  border-radius: 25px;
+}
+
+/* Position the front and back side */
+.flip-card-front-learn, .flip-card-back-learn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  background-color: #000000;
+  color: #008000; 
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front-learn {
+  background-color: #ffd700;
+  color: black;
+  font-family:'Fredericka the Great', cursive;
+  border-radius: 25px;
+  margin-top: 30px;
+}
+/* Style the back side */
+.flip-card-back-learn {
+  
+  color: #ffd700;
+  transform: rotateY(180deg);
+  border-radius: 25px;
+}
+
+/* This section provides letter animation */
+* {
+  box-sizing: border-box;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+}
+
+.end-left {
+  margin-left: -235px;
+}
+
+.end-right {
+  margin-right: -117.5px;
+}
+
+.outline {
+  position: absolute;
+  top: 20px;
+}
+
+.outline {
+  color: black;
+  -webkit-text-fill-color: transparent;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffd700;
+  font-size: 64px;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.orbs {
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: 100;
+  display: block;
+  font-size: 128px;
+}
+.orbs span {
+  color: red;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  text-shadow: 0 0 20px orange, 1px 1px 20px orange, 2px 2px 20px orange, -1px -1px 20px orange, -2px -2px 20px orange;
   
 }
-
-
-/* }
-.logo {
-  margin-bottom: 0px;
-  margin-top: 84px;
-  font-size: 45px;
-  margin-left: 640px;
-  color: #ffd700; */
-
+.orbs span:first-child {
+  margin-left: -210px;
+}
+.orbs span:not(:first-child) {
+  margin-left: -35px;
 }
 
-/* Custom default button */
-/* .btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  box-shadow: 5px 10px 18px #cfae06; /* Prevent inheritance from `body` */
-  /* background-color: #fff;
-  border-block-end-style: .05rem solid black;
-} */
-
+.glow {
+  opacity: 0;
+  font-family: 'Arvo', serif;
+  font-weight: 300;
+  color: orange;
+  margin-left: -222.5px;
+  font-size: 105px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+}
