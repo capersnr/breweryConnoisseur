@@ -4,23 +4,30 @@ $(document).ready(function () {
     infowindow = new google.maps.InfoWindow();
     var mainloc = {lat:38.92039, lng: -77.03856}
     var map = new google.maps.Map(document.getElementById('gmap'), {zoom: 11, center: mainloc}); 
-    var zip;   
-    var rating;
-    var offset;
+    var zip=20009;   
+    var rating=0;
+    var offset = 0;
     var breweries=[];
-    var radius;
+    var radius=1609;
 
     var dcloc= {lat:38.92039, lng: -77.03856}; 
     var mdloc = {lat:39.00335, lng: -77.035446}; 
     var valoc= {lat:38.88659, lng: -77.09473};
 
-$("#search-btn").on("click", function () {
-offset=parseInt(0);
+
+  $(document).on ("click", "#search-btn", function (event)  {
+    event.preventDefault();
+breweries=[];
+offset=0;
       
   zip=$("#zip-select option:selected").attr("zip");
   radius=$("#rad-select option:selected").attr("radius");
   rating=$("#yelp-select option:selected").attr("rating");
-  console.log("Zip selected is" + zip)
+  console.log("Zip from search click is is" + zip)
+  console.log("Radisu selected from search click is" + radius)
+  console.log("Rating selected from search click is" + rating)
+
+console.log("offset when serch was clicked is " + offset)
 
   /*if (zip=20009) {
     mainloc=dcloc;
@@ -32,9 +39,8 @@ offset=parseInt(0);
 
   map = new google.maps.Map(document.getElementById('gmap'), {zoom: 11, center: mainloc});  
   
-  rating=0;
-  breweries=[];
-  offset=0;
+ 
+ 
   getBrewPages(zip, radius, rating);
 
   getBreweries(offset, zip,radius,rating)
@@ -48,7 +54,7 @@ offset=parseInt(0);
 
  
     
-function getBrewPages (zip) {
+function getBrewPages (zip, radius, rating) {
   
             var settings = {
                     "async": true,
@@ -63,6 +69,8 @@ function getBrewPages (zip) {
             
             
                   $.ajax(settings).then(function(response) {
+
+                    console.log("results from searh are " + response)
             
                     var brewPages=0;
 
@@ -80,18 +88,18 @@ function getBrewPages (zip) {
            
             console.log("number of businesses is " + response.businesses.length )
             
-            createNav();
+            createNav(brewPages, offset);
                    
-            function createNav() {
+            function createNav(brewPages, offset) {
             $("#search-nav").empty();
                 console.log("number of pages is " + brewPages)
-                offset=0;
+                
                 for (i=1; i <= brewPages; i++ ) {
                     console.log("page " + i);
                     /*<li class="page-item page-link" value="0">1 - 10</li>*/
     
                     var navLi=$("<li>");
-                    navLi.addClass("page-link page-link");
+                    navLi.addClass("page-link page-item");
                     navLi.attr("value", offset);
                     navLi.text(i);
                     $("#search-nav").append(navLi);
@@ -108,20 +116,21 @@ function getBrewPages (zip) {
     
     
         
-       $(document).on ("click", ".page-link", function (){
+       $(document).on ("click", ".page-item", function (event){
+         event.preventDefault();
         breweries=[];
         map = new google.maps.Map(document.getElementById('gmap'), {zoom: 11, center: mainloc}); 
         offset=parseInt($(this).attr("value"));
         
-        console.log("offset clicked valie is " + $(this).attr("value"));
+        console.log("offset clicked  for pag value is " + $(this).attr("value"));
     
         console.log("offset is " + offset)
     
-        getBreweries(offset, zip)
+        getBreweries(offset, zip, radius, rating)
     
         })
         
-    function getBreweries (offset,zip) { 
+    function getBreweries (offset,zip, radius, rating) { 
         $("#results").empty();
             var settings = {
                 "async": true,
@@ -165,7 +174,7 @@ function getBrewPages (zip) {
               
            
         
-        function createBrews(breweries) {
+        function createBrews(breweries, offset) {
             
             
              for (i=0; i < breweries.length; i++) {
