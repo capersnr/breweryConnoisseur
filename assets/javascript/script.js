@@ -318,7 +318,7 @@ function getBrewPages (zip, radius, rating) {
   var database = firebase.database();
 
     // Capture Button Click
-    $("#join").on("click", function(event) {
+    $(document).on("click", "#join", function(event) {
       // prevent page from refreshing when form tries to submit itself
       event.preventDefault();
 
@@ -350,7 +350,7 @@ function getBrewPages (zip, radius, rating) {
       sessionStorage.setItem("email", email);
       sessionStorage.setItem("messages", messages);
 
-      $("#contact-form").reset();
+      $("#contact-form").trigger("reset");
 
  });
 
