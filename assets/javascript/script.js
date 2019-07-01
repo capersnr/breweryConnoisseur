@@ -350,6 +350,9 @@ function getBrewPages (zip, radius, rating) {
       sessionStorage.setItem("email", email);
       sessionStorage.setItem("messages", messages);
 
+      $("#form-name").text(name);
+      $("#contact-modal").modal("toggle");
+
       $("#contact-form").trigger("reset");
 
  });

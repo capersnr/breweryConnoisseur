@@ -14,18 +14,20 @@ overflow-x: hidden;
 /*Navbar CSS */
 
 #mainNav {
-  background-color:#390608;
+  background:linear-gradient(to bottom right ,#472903, #3b2007,#472903);
   font-family: 'Fredericka the Great', cursive;
+  
 
 
 }
 
 #mainNav a {
-    color:#fef7e9
+    color:#fff8eb
     
 }
 .navbar-brand {
-   
+  padding-top:0px;
+  padding-bottom:0px;
 }
 
 .intro-text {
@@ -33,7 +35,7 @@ overflow-x: hidden;
   padding-bottom: 50px;
 
 color:#fef7e9;
-text-shadow: 2px 2px #390608;
+text-shadow: 2px 2px #472903;
 }
 
 .intro-text, .intro-lead-in {
@@ -54,15 +56,9 @@ font-family: 'Fredericka the Great', cursive;
 
 }
 
-#landing-search-btn {
-  margin-top:20px;
-  background-color:#390608;
-  font-family: 'Fredericka the Great', cursive;
-  color:#fef7e9;
-  }
 
 #search-btn  {
-background-color:#390608;
+background-color:#472903;
 font-family: 'Fredericka the Great', cursive;
 }
 #search-bar {
@@ -79,16 +75,17 @@ padding-bottom:20px;
     background-position: center center;
     background-size: cover;
     height:100vh;
+    
  
   }
 
   .page-section {
-padding-top:75px;
+padding-top:85px;
   }
 
   .section-heading {
     padding-bottom:10px;
-   color:#390608;
+   color:#472903;
    font-family: 'Fredericka the Great', cursive;
   }
 
@@ -104,7 +101,7 @@ padding-top:75px;
  
   .head{float:left;width:100%;}
   .search-box{width:90%; margin:0 auto 40px; }
-  .listing-block{background:#fef7e9; height:400px; padding-top:20px; overflow-y:scroll;}
+  .listing-block{background:#fef7e9; height:500px; padding-top:20px; overflow-y:scroll;}
  
   .media {background:#fff; position:relative; margin-bottom:15px;}
   .media img{width:200px;margin:0; height:136px;}
@@ -119,7 +116,7 @@ padding-top:75px;
   .map-box{background-color:#A3CCFF;}
 
   #gmap {
-  height:400px;
+  height:500px;
   width:100%;
   
   }
@@ -201,6 +198,11 @@ color:#d28816;
 /* End Search Results CSS */
 
 /* Team Member Section */
+
+.team-row {
+  padding-top:50px;
+  padding-bottom:50px;
+}
 .team-member {
     margin-bottom: 50px;
     text-align: center;
@@ -214,7 +216,7 @@ color:#d28816;
   
   .team-member h4 {
     margin-top: 25px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     text-transform: none;
     color:#d28816;
     font-family: 'Fredericka the Great', cursive;
@@ -245,14 +247,27 @@ color:#d28816;
   }
 
   #join{
-    background-color:#390608;
+    background-color:#472903;
     font-family: 'Fredericka the Great', cursive;
   color: #fef7e9
   }
 
   .contact {
   color: #fef7e9;
-  text-shadow: 1px 1px #390608;
+  text-shadow: 1px 1px #472903;
+  }
+
+  .modal-header, .modal-footer {
+    background-color:#472903;
+    color:#fef7e9;
+    font-family: 'Fredericka the Great', cursive;
+  }
+
+  .modal-btn, .modal-btn:hover {
+  background-color: #fef7e9;
+
+  color:#472903;
+
   }
 
 
