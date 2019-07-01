@@ -16,12 +16,13 @@ overflow-x: hidden;
 #mainNav {
   background-color:#390608;
   font-family: 'Fredericka the Great', cursive;
+  
 
 
 }
 
 #mainNav a {
-    color:#fef7e9
+    color:#fff8eb
     
 }
 .navbar-brand {
@@ -79,6 +80,7 @@ padding-bottom:20px;
     background-position: center center;
     background-size: cover;
     height:100vh;
+    
  
   }
 
@@ -88,7 +90,7 @@ padding-top:75px;
 
   .section-heading {
     padding-bottom:10px;
-   color:#390608;
+   color:#2c0a0c;
    font-family: 'Fredericka the Great', cursive;
   }
 
