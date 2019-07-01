@@ -23,6 +23,7 @@
 <link href='https://fonts.googleapis.com/css?family=Raleway:300,100' rel='stylesheet' type='text/css'>
 
 <!--CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 <link rel="stylesheet" type ="text/css" href="assets/css/style.css">
 
@@ -80,7 +81,24 @@
         <div class="container">
           <div class="intro-text">
               <div class="intro-text">
-                  <div class="intro-lead-in">Welcome To HOP'n Brew</div>
+
+                  <div class="intro-lead-in">
+
+                    <div class="d-inline-block">
+                        Welcome To 
+                    </div>
+
+                    <div class="animated bounce delay-2s d-inline-block slow">
+                        HOP'n
+                    </div>
+                    
+                   <div class="d-inline-block">
+                      Brew
+                   </div>
+                    
+                    
+                  </div>
+                  </div>
                   <div class="intro-heading text-uppercase">Your DMV Resource for finding local breweries and HOP'n Events!</div>
             <section>
                 <div id="action">
@@ -240,12 +258,15 @@
 
          
 
-          <div class="row text-center">
+          <div class="row text-center team-row">
             <div class="col-sm-4">
               <div class="team-member">
                 <img class="mx-auto rounded-circle" src="assets/images/MelvinsPic.JPG" alt="">
                 <h4>Melvin Moore </h4>
-                <p class="text-muted">Lead Designer</p>
+                <h5 class="text-muted">Lead Designer</h5>
+                <p class="text-muted">HTML</p>
+                <p class="text-muted">CSS</p>
+                <p class="text-muted">Anitmations</p>
                 <ul class="list-inline social-buttons">
                   <li class="list-inline-item">
                     <a href="#">
@@ -270,7 +291,10 @@
               <div class="team-member">
                 <img class="mx-auto rounded-circle" src="assets/images/NormsPic.JPG" alt="">
                 <h4>Norman Capers</h4>
-                <p class="text-muted">Designer</p>
+                <h5 class="text-muted">Designer</h5>
+                <p class="text-muted">HTML</p>
+                <p class="text-muted">CSS</p>
+                <p class="text-muted">Anitmations</p>
                 <ul class="list-inline social-buttons">
                   <li class="list-inline-item">
                     <a href="#">
@@ -295,7 +319,10 @@
               <div class="team-member">
                 <img class="mx-auto rounded-circle" src="assets/images/KevinsPic.JPG" alt="">
                 <h4>Kevin Steele</h4>
-                <p class="text-muted">Developer</p>
+                <h5 class="text-muted">Developer</h5>
+                <p class="text-muted">Javascript</p>
+                <p class="text-muted">JQUERY</p>
+                <p class="text-muted">APIs</p>
                 <ul class="list-inline social-buttons">
                   <li class="list-inline-item">
                     <a href="#">
@@ -327,45 +354,59 @@
 <!--End Team Section -->
 
 <!-- Contact Form Section-->
-<section class="page-section contact-form" id="contact" >
+<section class="page-section contact-section" id="contact" >
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Mailing List</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3 id="form-name"></h3>
+          <p>Thanks for joining our mailing list!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary modal-btn" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 
 <div class="container">
 
  <div class="col-lg-7">
     <h3 class="section-heading text-left contact">Want to stay connected to what's HOP'n in the DMV? Join our mailing list!</h3>
  </div>
-        <div class="col-lg-8">
-            
+        
+ <form id="contact-form">
+
+  <div class="form-group w-50">
+    <input class="form-control form-control-lg" id="name-input" placeholder="Your Name:" type="text">
+    </div>       
           
-              <div class="form row" id="contact-form">
-               
-                 <br>
-                  <div class="form-group col-md-7">
-                  <input class="form-control form-control-lg" id="name-input" placeholder="Your Name:" type="text">
-                  </div>
-              </div>
+    <div class="form-group w-50">
+      <input class="form-control form-control-lg" id="email-input" placeholder="Your Email:" type="email">    
+    </div> 
+
+    <div class="form-group w-50">
+        <textarea class="form-control form-control-lg" id="messages-input" placeholder="Have feedback? We'd love to hear from you!" rows="5"></textarea>
+    </div>            
+                 
+    <div class="justify-content-left w-50">
+      <button class="btn btn-secondary btn-lg" id="join" type="submit">Join Now!</button>
+    </div>            
   
-              <div class="row">
-                  <div class="form-group col-md-7">
-                  <input class="form-control form-control-lg" id="email-input" placeholder="Your Email:" type="email">    
-                  </div>
-              </div>
+</form>
+</div>
   
-              <div class="row">
-                  <div class="form-group col-md-7">
-                  <textarea class="form-control form-control-lg" id="messages-input" placeholder="Have feedback? We'd love to hear from you!" rows="5"></textarea>
-                  </div>  
-              </div>
-  
-              <div class="row">
-              <div class="form-group col-md-7 justify-content-center">
-                <button class="btn btn-secondary btn-lg" id="join" type="submit">Join Now!</button>
-                </div>  
-              </div>
-  
-        </div>
-  
-      </div>
+   
 
 
 </section>
