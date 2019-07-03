@@ -31,14 +31,12 @@
 
 <script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
 
-
-
   <!--Firebase-->
   <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-database.js"></script>
 
 <!--Javascript-->
-<script type ="text/javascript" src="assets/javascript/script.js"></script>
+<script type ="text/javascript" src="assets/javascript/script2.js"></script>
 
 
 
@@ -76,19 +74,19 @@
         </div>
       </nav>    
 
-<!-- Header -->
+<!-- landing Page-->
   <header class="masthead">
         <div class="container">
-          <div class="intro-text">
-              <div class="intro-text">
+          <div class="welcome-text">
+              <div class="welcome-text">
 
-                  <div class="intro-lead-in">
+                  <div class="welcome-description">
 
                     <div class="d-inline-block">
                         Welcome To 
                     </div>
 
-                    <div class="animated bounce delay-2s d-inline-block slow">
+                    <div class="animated infinite bounce delay-2s d-inline-block slow">
                         HOP'n
                     </div>
                     
@@ -118,10 +116,6 @@
                     </div>
                 </div>
             </section>
-            
-            
-         
-           <!-- <a class="btn btn-xl text-uppercase" id="landing-search-btn" href="#search">Search for a Brewery</a> -->
           </div>
         </div>
 </header>
@@ -130,6 +124,28 @@
 <!-- Search Section -->
  
 <section class="search-box page-section" id="search">
+
+    <!-- Modal used to display search errors -->
+    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Error</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h3></h3>
+              <p>No results found. Please adjust your search parameters</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary modal-btn" data-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
 
         <div class="container">
                 <div class="row">
@@ -209,7 +225,7 @@
     </div>  
 
     <div class="row">
-        <div class="col-md-6 listing-block" id="results">
+        <div class="col-md-6 results-block" id="results">
             
         </div>
 
