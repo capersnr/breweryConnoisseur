@@ -10,13 +10,12 @@ $(document).ready(function () {
     var breweries=[];
     var radius=1609;
 
-    var dcloc= {lat:38.92039, lng: -77.03856}; 
-    var mdloc = {lat:39.00335, lng: -77.035446}; 
-    var valoc= {lat:38.88659, lng: -77.09473};
+   
 
 
-  $(document).on ("click", "#search-btn", function (event)  {
-    event.preventDefault();
+$(document).on ("click", "#search-btn", function (event)  {
+  event.preventDefault();
+ $("#search-nav").empty();   
 breweries=[];
 offset=0;
       
@@ -43,7 +42,7 @@ console.log("offset when serch was clicked is " + offset)
  
   getBrewPages(zip, radius, rating);
 
-  getBreweries(offset, zip,radius,rating)
+ 
 
   
 
@@ -55,11 +54,11 @@ console.log("offset when serch was clicked is " + offset)
  
     
 function getBrewPages (zip, radius, rating) {
-  
+  breweries=[]
             var settings = {
                     "async": true,
                     "crossDomain": true,
-                    "url": "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + zip + "&radius=" + radius + "&term=breweries&categories=breweries&rating=" + rating + "&sort_by=distance&limit=50",
+                    "url": "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + zip + "&radius=" + radius + "&term=breweries&categories=breweries&sort_by=distance&limit=50",
                     "method": "GET",
                     "headers": {
                       "Authorization": "Bearer 8D_mZteQabQeW-jEZAK4kU4o9h7PhhECcqPsritDt99eippSSN851BkePtOuCLpVShTshzeKUUKDiHj51cX4vJMN0YZY_tPNJVTsapTBgoWt0dErzhHH1psW0FYKXXYx",
@@ -74,12 +73,20 @@ function getBrewPages (zip, radius, rating) {
             
                     var brewPages=0;
 
-                if(((response.businesses.length) % 10) === 0 ){
+                    for (i =0; i < response.businesses.length; i++) {
+                      if (response.businesses[i].rating >= rating) {
+                       breweries.push(response.businesses[i]);
+                      }
+               
+                     } 
+                console.log("Breweries after filtering for rating is "+ breweries);    
 
-                brewPages=(response.businesses.length) / 10;
+                if(((breweries.length) % 10) === 0 ){
+
+                brewPages=(breweries.length) / 10;
     
                  } else {
-                brewPages = Math.floor((response.businesses.length) / 10) + 1;
+                brewPages = Math.floor((breweries.length) / 10) + 1;
                 
                 }
     
@@ -111,6 +118,8 @@ function getBrewPages (zip, radius, rating) {
     
                   });
             
+
+                 getBreweries(offset, zip,radius,rating)
             }   
           
     
@@ -135,7 +144,7 @@ function getBrewPages (zip, radius, rating) {
             var settings = {
                 "async": true,
                 "crossDomain": true,
-                "url": "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + zip + "&radius=" +radius + "&term=breweries&categories=breweries&rating=" + rating + "&sort_by=distance&limit=10&offset=" +offset ,
+                "url": "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + zip + "&radius=" +radius + "&offset=" + offset +"&term=breweries&categories=breweries&sort_by=distance&limit=10",
                 "method": "GET",
                 "headers": {
                   "Authorization": "Bearer 8D_mZteQabQeW-jEZAK4kU4o9h7PhhECcqPsritDt99eippSSN851BkePtOuCLpVShTshzeKUUKDiHj51cX4vJMN0YZY_tPNJVTsapTBgoWt0dErzhHH1psW0FYKXXYx",
@@ -145,7 +154,8 @@ function getBrewPages (zip, radius, rating) {
         
         
               $.ajax(settings).then(function(response) {
-                
+                console.log(response);
+              console.log("Number of " + rating + " star ratings is " + response.businesses.length)  
               
               for (i =0; i < response.businesses.length; i++) {
                if (response.businesses[i].rating >= rating) {
@@ -155,7 +165,7 @@ function getBrewPages (zip, radius, rating) {
               } 
               
               if (breweries.length===0) {
-              $("#modal-error").modal("toggle");
+              $("#search-modal").modal("toggle");
               }
     
             
@@ -359,7 +369,7 @@ function getBrewPages (zip, radius, rating) {
 
     
   
-        
+
        
         
         
