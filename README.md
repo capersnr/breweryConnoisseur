@@ -14,6 +14,8 @@ Possible taglines: Debug and Brew, Coding is thirsty work
 Guthub Repo:
 https://github.com/capersnr/breweryConnoisseur
 
+Active Site: 
+https://capersnr.github.io/breweryConnoisseur/
 
 Core Project Feature 
 
